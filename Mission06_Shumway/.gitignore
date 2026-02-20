@@ -1,0 +1,12 @@
+# Build output
+bin/
+obj/
+
+# Rider/JetBrains
+.idea/
+*.user
+*.suo
+
+# SQLite temp files
+*.sqlite-wal
+*.sqlite-shm
