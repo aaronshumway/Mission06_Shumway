@@ -1,11 +1,11 @@
-using Mission06_Shumway.Models;
 using Microsoft.EntityFrameworkCore;
+using Mission06_Shumway.Models.Generated;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<MovieContext>(options =>
+builder.Services.AddDbContext<HiltonMovieContext>(options =>
 {
     options.UseSqlite(builder.Configuration["ConnectionStrings:DefaultConnection"]);
 });

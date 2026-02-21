@@ -1,0 +1,17 @@
+@model Mission06_Shumway.Models.Generated.Movie
+
+@{
+    ViewData["Title"] = "Delete Movie";
+}
+
+<h1 class="mb-3">Delete Movie</h1>
+
+<div class="alert alert-warning">
+    Are you sure you want to delete <strong>@Model.Title</strong> (@Model.Year)?
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="MovieId" />
+    <button type="submit" class="btn btn-danger">Yes, Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
